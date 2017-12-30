@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="EditPlus®">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<title>Document</title>
+	<style type="text/css">
+      *{margin:0;padding:0}
+      .box{
+         width:700px;
+         height:400px;
+         border:1px solid #4b4b4b;/*background:#9d9d9d;*/
+         margin:90px auto;
+         position:relative;
+      }
+   
+      .box .pic{width:700px;height:400px;overflow:hidden;}
+      .box .pic ul li{
+         list-style:none;
+         width:700px;
+         height:400px;
+         position:relative;
+      }
+
+      .box .pic ul li img{
+         position:absolute;
+         left:0px;
+         top:0px;
+      }
+
+		.box .nav{
+         width:100px;
+         height:14px;
+         position:absolute;
+         right:20px;bottom:10px;
+      }
+      
+      .box .nav ul li{
+         list-style:none;
+         float:left;
+         border:1px solid gray;
+         width:15px;height:14px;
+         margin-left:5px;
+         line-height:14px;
+         text-align:center;
+      }
+
+      .box .nav ul li.bg{background:#ff7300;}
+	</style>
+	</head>
+	<body>
+		<div class="box">
+         <div class="pic">
+            <ul>
+               <li style="background:blue;"><img src="./images/wzb1.png" alt="" /></li>
+               <li style="background:red;"><img src="./images/wzb2.png" alt="" /></li>
+               <li style="background:gray;"><img src="./images/wzb3.png" alt="" /></li>
+               <li style="background:black;"><img src="./images/wzb4.png" alt="" /></li>
+            </ul>
+         </div>
+         <div class="nav">
+            <ul>
+               <li class="bg"></li>
+               <li ></li>
+               <li></li>
+               <li></li>
+            </ul>
+         </div>
+		</div>
+
+      <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript">
+         $(".box .nav ul li").click(function(){
+            var i = 0;
+            $(this).addClass("bg").siblings().removeClass("bg");
+            i = $(this).index();
+           $(".box .pic ul li").eq(i).fadeIn(100).siblings().fadeOut(100);
+           
+         });
+      </script>
+	</body>
+</html>
