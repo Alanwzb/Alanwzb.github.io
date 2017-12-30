@@ -25,10 +25,17 @@
          position:relative;
       }
 
-      .box .pic ul li img{
+      .box .pic ul li .img1{
          position:absolute;
-         left:0px;
+         left:-700px;
          top:0px;
+      }
+
+      .box .pic ul li .img2{
+         position:absolute;
+         left:700px;
+         top:0px;
+         display:none;
       }
 
 		.box .nav{
@@ -46,6 +53,7 @@
          margin-left:5px;
          line-height:14px;
          text-align:center;
+         cursor:pointer;
       }
 
       .box .nav ul li.bg{background:#ff7300;}
@@ -55,10 +63,18 @@
 		<div class="box">
          <div class="pic">
             <ul>
-               <li style="background:blue;"><img src="./images/wzb1.png" alt="" /></li>
-               <li style="background:red;"><img src="./images/wzb2.png" alt="" /></li>
-               <li style="background:gray;"><img src="./images/wzb3.png" alt="" /></li>
-               <li style="background:black;"><img src="./images/wzb4.png" alt="" /></li>
+               <li style="background:url(./images/wzb1.png);">
+                  <img class="img1" src="./images/wzb1-1.png" alt="" />
+                  <img class="img2" src="./images/wzb1-2.png" alt="" /></li>
+               <li style="background:url(./images/wzb2.png);">
+                  <img class="img1" src="./images/wzb2-1.png" alt="" />
+                  <img class="img2" src="./images/wzb2-2.png" alt="" /></li></li>
+               <li style="background:url(./images/wzb3.png);">
+                  <img class="img1" src="./images/wzb3-1.png" alt="" />
+                  <img class="img2" src="./images/wzb3-2.png" alt="" /></li>
+               <li style="background:url(./images/wzb4.png);">
+                  <img class="img1" src="./images/wzb4-1.png" alt="" />
+                  <img class="img2" src="./images/wzb4-2.png" alt="" </li>
             </ul>
          </div>
          <div class="nav">
@@ -73,12 +89,56 @@
 
       <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
       <script type="text/javascript">
-         $(".box .nav ul li").click(function(){
-            var i = 0;
-            $(this).addClass("bg").siblings().removeClass("bg");
-            i = $(this).index();
-           $(".box .pic ul li").eq(i).fadeIn(100).siblings().fadeOut(100);
-           
+         var i = -1;
+         var time = 0;
+         var index_click = 0;
+
+         //设置各个元素的动画和样式
+         function scroll(j){
+            $(".box .nav ul li").eq(j).addClass("bg").siblings().removeClass("bg");
+            $(".box .pic ul li").eq(j).fadeIn(100).siblings().fadeOut(100);
+            $(".box .pic ul li").eq(j).find(".img1").css({left:"-760px"});
+            $(".box .pic ul li").eq(j).find(".img2").css({left:"700px"},{display:"none"});
+            $(".box .pic ul li").eq(j).find(".img1").animate({left:"0px"},500,function(){
+               $(".box .pic ul li").eq(j).find(".img2").css("display","block");
+               $(".box .pic ul li").eq(j).find(".img2").animate({left:"0px"},500);
+            });
+         }
+
+          //当页面开始进入时调用
+         jumper();
+         function jumper(){
+            time = 0;
+            i++;
+            if(i>3){
+               i = 0;
+            }
+            scroll(i);
+         }
+         time = setInterval("jumper()",2000);
+
+
+         //鼠标点击无序列表时
+         $(".box .nav ul li").click(function(){ 
+            index_click = $(this).index();
+            scroll(index_click);
+            index_click = 0;
+         });
+
+
+         /*清楚定时,当鼠标移进按钮时清除定时，移开按钮时启起定时*/
+         $(".box .nav ul li").on("mouseenter",function(){
+            clearInterval(time);
+         }).on("mouseleave",function(){
+            time = setInterval("jumper()",2000);
+         });
+
+         //划过无序列表时
+         $(".box .nav ul li").on("mouseenter",function(){
+            index_click = $(this).index();
+            scroll(index_click);
+            index_click = 0;
+            //alert($(this).index());
          });
       </script>
 	</body>
