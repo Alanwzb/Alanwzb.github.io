@@ -1,38 +1,102 @@
-.top{
-	height:170px;
-	width:90%;
-	margin:1px auto;
+@charset "utf-8";
+
+/*box*/
+.box{
+	position:relative;
 }
 
-.top .nav{
-	height:50px;
-	width:1195px;
-	background:gray;
-	position:relative;
-	left:0;
-	top:120px;
+/*首页头部***************************************************/
+.box > .top{
+	height:170px;
+	width:1100px;
 	margin:0px auto;
 }
 
-.main{
-	width:90%;
-	margin:1px auto;
+/*首页导航****************************************************/
+.box > .nav{
+	height:50px;
+	width:1100px;
+	background:gray;
+	margin:10px auto;
+}
+.box > .nav > ul.navbar{
+	width:1000px;
+	height:50px;			
+	margin:0 auto;
+}
+.box > .nav > ul.navbar li{
+	list-style:none;
+	float:left;
+	width:115px;
+	height:50px;			
+	margin:0 5px;
+	text-align:center;
+	line-height:50px;
+	color:#FFFFFF;
+}
+.box > .nav > ul.navbar > li.home{
+	background:#05C2F9;
+}
+.box > .nav > ul.navbar > li:hover{
+	background:#05C2F9;
+	cursor:pointer;
 }
 
-/*首页底部*/
+
+/*首页中部***************************************************/
+.box > div.main{
+	width:1100px;
+	margin:0px auto;
+	margin-top:10px;
+	background:white;
+}
+.box > div.main > div.w_tab{
+	width:115px;
+	background:red;
+	margin-left:55px;
+}
+.box > div.main > div.w_tab > ul.list_ul{
+
+}
+.box > div.main > div.w_tab > ul.list_ul > li.list_ul-li{
+	list-style:none;	/*取消li前面的圆点*/
+	margin-top:10px;	/*外边距,距顶部距离*/
+	width:100%;			/*li的宽度*/
+	height:50px;		/*li的高度*/
+	background:#009688;	/*li的背景色*/
+	cursor:pointer;		/*鼠标放在li上面时的手指*/
+	text-align:center;	/*下面文字的相关文字样式*/
+	line-height:50px;
+	color:#FFFFFF;
+	position:relative;	/*div.w_dip绝对定位时的参考位置*/
+}
+.box > div.main > div.w_tab > ul.list_ul > li:hover{
+	background:#05C2F9;
+}
+
+.box > div.main > div.w_tab > ul.list_ul > li div.w_dips{
+	height:285px;
+	width:920px;
+	background:blue;
+	position:absolute;
+	top:2px;
+	left:120px;
+
+}
+
+
+/*首页底部**************************************************/
 .bottom{
 	height:100px;
-	width:90%;
+	width:1100px;
 	margin:10px auto 5px;
 }
-
 .bottom p{
 	margin:5px auto;
 	text-align:center;
 	line-height:100px;
 	color:#FFFFFF;
 }
-
 .bottom p a{
 	text-decoration:none;
 	color:#0572f9;

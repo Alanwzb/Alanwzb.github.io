@@ -6,58 +6,8 @@
 	<link href="css/common.css" type="text/css" rel="stylesheet"/>
 	<link href="css/kuangjia.css" type="text/css" rel="stylesheet"/>
 	<style>
-		.box > .top> .nav> ul.navbar{
-			width:1000px;
-			height:50px;			
-			margin:0 auto;
-		}
+		
 
-		.box > .top> .nav> ul.navbar li{
-			list-style:none;
-			float:left;
-			width:115px;
-			height:50px;			
-			margin:0 5px;
-			text-align:center;
-			line-height:50px;
-			color:#FFFFFF;
-		}
-
-		.box > .top> .nav> ul.navbar li.home{
-			background:#05C2F9;
-		}
-
-		.box > .top> .nav> ul.navbar li:hover{
-			background:#05C2F9;
-			cursor:pointer;
-		}
-
-		/*页面中部*/
-		.box>	div.main{
-			margin-top:10px;
-		}
-
-		.box>	.main> ul.list_ul{
-			width:115px;
-			margin:5px 5px 5px 47px ;
-		}
-	
-		.box>	.main> ul.list_ul> li.list_ul-li{
-			list-style:none;	/*取消li前面的圆点*/
-			margin-top:10px;	/*外边距,距顶部距离*/
-			width:100%;			/*li的宽度*/
-			height:50px;		/*li的高度*/
-			background:#009688;	/*li的背景色*/
-			cursor:pointer;			/*鼠标放在li上面时的手指*/
-			text-align:center;	/*下面文字的相关文字样式*/
-			line-height:50px;
-			color:#FFFFFF;
-
-		}
-
-		.box>	.main> ul.list_ul> li:hover{
-			background:#05C2F9;
-		}
 		
 	</style>
 </head>
@@ -65,31 +15,38 @@
 	<div class="box">
 		<!--页面头部-->
 		<div class="top">	
+			
+		</div>
 
-			<!--导航菜单-->
-			<div class="nav">
-				<ul class="navbar">
-					<li class="home"> Home </li>
-					<li> Web前端 </li> 
-					<li> HTML5 </li>
-					<li> CSS3 </li>
-					<li> PHP </li>
-					<li> MySQL </li>
-				   <li> Git/SVN </li>
-				   <li> 常用软件 </li>
-				</ul> 
-			</div>			
+		<!--导航菜单-->
+		<div class="nav">
+			<ul class="navbar">
+				<li class="home"> Home </li>
+				<li> Web前端 </li> 
+				<li> HTML5 </li>
+				<li> CSS3 </li>
+				<li> PHP </li>
+				<li> MySQL </li>
+			   <li> Git/SVN </li>
+			   <li> 常用软件 </li>
+			</ul> 
 		</div>
 
 		<!--页面中部-->
 		<div class="main">
-			<ul class="list_ul">
-				<li class="list_ul-li"><span>About</span></li>
-				<li class="list_ul-li"><span>Experience</span></li>
-				<li class="list_ul-li"><span>Education</span></li>
-				<li class="list_ul-li"><span>Skills</span></li>
-				<li class="list_ul-li"><span>Contact</span></li>
-			</ul>
+			<div class="w_tab">
+				<ul class="list_ul">
+					<li class="list_ul-li"><span>About</span>
+						<div class="w_dips">
+							
+						</div>
+					</li>
+					<li class="list_ul-li"><span>Experience</span></li>
+					<li class="list_ul-li"><span>Education</span></li>
+					<li class="list_ul-li"><span>Skills</span></li>
+					<li class="list_ul-li"><span>Contact</span></li>
+				</ul>
+			</div>
 
 		</div>
 
