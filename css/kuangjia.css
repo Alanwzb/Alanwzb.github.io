@@ -48,11 +48,11 @@
 	width:1100px;
 	margin:0px auto;
 	margin-top:10px;
-	background:white;
+	/*background:white;*/
 }
 .box > div.main > div.w_tab{
 	width:115px;
-	background:red;
+	/*background:red;*/
 	margin-left:55px;
 }
 .box > div.main > div.w_tab > ul.list_ul{
@@ -71,17 +71,41 @@
 	position:relative;	/*div.w_dip绝对定位时的参考位置*/
 }
 .box > div.main > div.w_tab > ul.list_ul > li:hover{
-	background:#05C2F9;
+	background:red;
 }
 
 .box > div.main > div.w_tab > ul.list_ul > li div.w_dips{
 	height:285px;
 	width:920px;
-	background:blue;
+	/*background:blue;*/
 	position:absolute;
 	top:2px;
 	left:120px;
-
+}
+.box > div.main > div.w_tab > ul.list_ul > li div.w_dips > .w_wzb{
+	height:285px;
+	width:400px;
+	/*background:red;*/
+	float:left; 
+}
+.box > div.main > div.w_tab > ul.list_ul > li div.w_dips > .wzb_info{
+	height:285px;
+	width:510px;
+	float:right;
+}
+.box > div.main > div.w_tab > ul.list_ul > li div.w_dips > .wzb_info ul{
+	width:300px;
+	height:285px;
+}
+.box > div.main > div.w_tab > ul.list_ul > li div.w_dips > .wzb_info ul li{
+	list-style:none;
+	width:300px;
+	height:28px;
+	text-align:left;
+	line-height:28px;
+	padding-left:20px;
+	margin-top:10px;
+	margin-bottom:10px;
 }
 
 
