@@ -2,14 +2,14 @@
 
 /*box*/
 .box{
-	position:relative;
+
 }
 
 /*首页头部***************************************************/
 .box > .top{
 	height:170px;
 	width:1100px;
-	margin:0px auto;
+	margin:0px auto;text-align:center;line-height:170px;color:#FF0000;
 }
 
 /*首页导航****************************************************/
@@ -34,79 +34,130 @@
 	line-height:50px;
 	color:#FFFFFF;
 }
-.box > .nav > ul.navbar > li.home{
-	background:#05C2F9;
-}
+
 .box > .nav > ul.navbar > li:hover{
+	background:#05C2F9;
+	cursor:pointer;
+}
+.box > .nav > ul.navbar > li.nav_bg{
 	background:#05C2F9;
 	cursor:pointer;
 }
 
 
 /*首页中部***************************************************/
+/***************/
 .box > div.main{
 	width:1100px;
+	height:320px;
 	margin:0px auto;
-	margin-top:10px;
-	/*background:white;*/
+	overflow:hidden;
 }
-.box > div.main > div.w_tab{
-	width:115px;
-	/*background:red;*/
+div.main > .main_box{
+	width:960px;
+	height:320px;
 	margin-left:55px;
 }
-.box > div.main > div.w_tab > ul.list_ul{
-
+div.main > .main_box > .main_box_ul{
+	width:960px;
+	height:320px;
 }
-.box > div.main > div.w_tab > ul.list_ul > li.list_ul-li{
-	list-style:none;	/*取消li前面的圆点*/
-	margin-top:10px;	/*外边距,距顶部距离*/
-	width:100%;			/*li的宽度*/
-	height:50px;		/*li的高度*/
-	background:#009688;	/*li的背景色*/
-	cursor:pointer;		/*鼠标放在li上面时的手指*/
-	text-align:center;	/*下面文字的相关文字样式*/
+div.main > .main_box > .main_box_ul > .main_box_ul_li{
+	list-style:none;
+	width:960px;
+	height:320px;
+}
+/*****Home*****************************************************/
+div.main > .main_box > .main_box_ul > .main_box_ul_li > .h_tab{
+	width:960px;
+	height:320px;
+	position:relative;
+}
+ .h_tab > .h_tab_ul{
+	width:115px;
+	height:320px;
+}
+.h_tab > .h_tab_ul > .h_tab_ul-li{
+	list-style:none;
+	margin-top:15px;	
+	width:115px;		
+	height:50px;		
+	background:#009688;			
+	text-align:center;	
 	line-height:50px;
 	color:#FFFFFF;
-	position:relative;	/*div.w_dip绝对定位时的参考位置*/
+	position:relative;
+	
 }
-.box > div.main > div.w_tab > ul.list_ul > li:hover{
-	background:red;
+.h_tab > .h_tab_ul > li:hover{
+	background:#FF0000;
+	cursor:pointer;
+}
+.h_tab > .h_tab_ul > li.h_tab_about{
+	background:#FF0000;
+	cursor:pointer;
+}
+.h_tab > .h_tab_two_ul{
+	height:319px;
+	width:830px;
+	position:absolute;
+	left:128px;
+	top:0px;
+	float:left;
 }
 
-.box > div.main > div.w_tab > ul.list_ul > li div.w_dips{
-	height:285px;
-	width:920px;
-	/*background:blue;*/
-	position:absolute;
-	top:2px;
-	left:120px;
-}
-.box > div.main > div.w_tab > ul.list_ul > li div.w_dips > .w_wzb{
-	height:285px;
-	width:400px;
-	/*background:red;*/
-	float:left; 
-}
-.box > div.main > div.w_tab > ul.list_ul > li div.w_dips > .wzb_info{
-	height:285px;
-	width:510px;
-	float:right;
-}
-.box > div.main > div.w_tab > ul.list_ul > li div.w_dips > .wzb_info ul{
-	width:300px;
-	height:285px;
-}
-.box > div.main > div.w_tab > ul.list_ul > li div.w_dips > .wzb_info ul li{
+.h_tab > .h_tab_two_ul > li{
 	list-style:none;
-	width:300px;
-	height:28px;
-	text-align:left;
-	line-height:28px;
-	padding-left:20px;
-	margin-top:10px;
-	margin-bottom:10px;
+	height:inherit;
+	width:inherit;
+	margin-bottom:2px;
 }
+
+/*About*/
+.h_tab > .h_tab_two_ul > li > #alan_id{
+	float:left;
+}
+.h_tab > .h_tab_two_ul > li > #alan_id > img{
+	height:319px;
+}
+.wzb_info{
+ 	float:right; 	
+	height:319px;
+	width:380px;
+	text-align:left;
+	color:#FFFFFF;
+}
+.wzb_info > ul > li{
+	list-style:none;
+	padding-left:20px;
+	font-size:18px;
+	margin-top:10px;
+	margin-bottom:10px; 
+}
+/*Experience*/
+.work_info{
+	height:100px;
+	width:500px;
+	text-align:left;
+	padding: 10px;
+}
+.work-info h4 {
+	
+}
+.work-info h5 {
+
+}
+
+.work-info p{
+	
+}
+/*Education*/
+
+/*Skills*/
+
+/*Contact*/
+
+
 
 
 /*首页底部**************************************************/
