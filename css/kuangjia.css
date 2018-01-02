@@ -141,15 +141,15 @@ div.main > .main_box > .main_box_ul > .main_box_ul_li > .h_tab{
 	text-align:left;
 	padding: 10px;
 }
-.work-info h4 {
-	
-}
-.work-info h5 {
-
-}
-
-.work-info p{
-	
+.work_info h4:before {
+	left: -14px;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+	/*-- w3layouts --*/
+	/*-- agileits --*/
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
 }
 /*Education*/
 
