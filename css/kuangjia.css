@@ -38,6 +38,7 @@
 .box > .nav > ul.navbar > li:hover{
 	background:#05C2F9;
 	cursor:pointer;
+	transform: skewY(10deg);
 }
 .box > .nav > ul.navbar > li.nav_bg{
 	background:#05C2F9;
@@ -119,6 +120,7 @@ div.main > .main_box > .main_box_ul > .main_box_ul_li > .h_tab{
 }
 .h_tab > .h_tab_two_ul > li > #alan_id > img{
 	height:319px;
+	border-radius:50%;
 }
 .wzb_info{
  	float:right; 	
