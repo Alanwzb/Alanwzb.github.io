@@ -36,13 +36,13 @@
 	text-align:center;
 	line-height:50px;
 	color:#FFFFFF;
-	transition:0.2s linear;
+	transition:2s linear;
 }
 
 .box > .nav > ul.navbar > li:hover{
 	background:#05C2F9;
 	cursor:pointer;
-	transform: rotate(360deg) skewY(10deg) scale(1.5);
+	transform: rotateY(360deg) ;
 }
 .box > .nav > ul.navbar > li.nav_bg{
 	background:#05C2F9;
@@ -92,21 +92,21 @@ div.main > .main_box > .main_box_ul > .main_box_ul_li > .h_tab{
 	line-height:50px;
 	color:#FFFFFF;
 	position:relative;
+
+	/*CSS3*/
+	transition: width 1s, height 1s, transform 1s;
+	-webkit-transition: width 1s, height 1s, -webkit-transform 1s;
 	
 }
 .h_tab > .h_tab_ul > li:hover{
 	background:#FF0000;
 	cursor:pointer;
 
-	box-shadow:5px 10px #272822 inset;
-	border-radius:10px;
-	transform:rotateX(20deg);
-	-ms-transform:rotateX(20deg);
-	-moz-transform:rotateX(20deg);
-	-webkit-transform:rotateX(20deg);
-	-o-transform:rotateX(20deg);
+	/*CSS3*/
+	width:120px;		
 }
 .h_tab > .h_tab_ul > li.h_tab_about{
+	width:120px;
 	background:#FF0000;
 	cursor:pointer;
 }
